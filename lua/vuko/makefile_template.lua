@@ -1,4 +1,4 @@
-vim.api.nvim_create_user_command('MakefileTemplate', function()
+vim.api.nvim_create_user_command('Makefile', function()
   local lines = {
     'CC = g++',
     'CCFLAGS = -std=c++2b -g -O3 -fsanitize=address -Wall -Wextra',
