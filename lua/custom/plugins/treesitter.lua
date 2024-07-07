@@ -5,7 +5,7 @@ return { -- Highlight, edit, and navigate code
   },
   build = ':TSUpdate',
   opts = {
-    ensure_installed = { 'bash', 'c', 'diff', 'javascript', 'typescript', 'lua', 'markdown', 'html', 'json', 'cpp' },
+    ensure_installed = { 'bash', 'c', 'diff', 'javascript', 'typescript', 'lua', 'markdown', 'html', 'json', 'cpp', 'query', 'json', 'go', 'tsx' },
     -- Autoinstall languages that are not installed
     auto_install = true,
     highlight = {

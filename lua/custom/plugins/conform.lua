@@ -30,7 +30,21 @@ return { -- Autoformat
       --
       -- You can use a sub-list to tell conform to run *until* a formatter
       -- is found.
-      javascript = { { 'prettier', 'prettierd' } },
+      svelte = { { 'prettierd', 'prettier' } },
+      javascript = { { 'prettierd', 'prettier' } },
+      typescript = { { 'prettierd', 'prettier' } },
+      javascriptreact = { { 'prettierd', 'prettier' } },
+      typescriptreact = { { 'prettierd', 'prettier' } },
+      json = { { 'prettierd', 'prettier' } },
+      graphql = { { 'prettierd', 'prettier' } },
+      html = { 'htmlbeautifier' },
+      bash = { 'beautysh' },
+      rust = { 'rustfmt' },
+      yaml = { 'yamlfix' },
+      toml = { 'taplo' },
+      css = { { 'prettierd', 'prettier' } },
+      scss = { { 'prettierd', 'prettier' } },
+      sh = { { 'shellcheck' } },
     },
   },
 }
