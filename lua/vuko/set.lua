@@ -19,25 +19,25 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 
 -- Sets the width of a tab character to 4 spaces
--- vim.opt.tabstop = 4
+vim.opt.tabstop = 4
 
 -- Sets the number of spaces a <Tab> counts for while performing editing operations
--- vim.opt.softtabstop = 4
+vim.opt.softtabstop = 4
 
 -- Sets the number of spaces to use for each step of (auto)indent
--- vim.opt.shiftwidth = 4
+vim.opt.shiftwidth = 4
 
 -- Converts tabs to spaces
--- vim.opt.expandtab = true
+vim.opt.expandtab = true
 
 -- Enables smart indentation
--- vim.opt.smartindent = true
+vim.opt.smartindent = true
 
 -- Enables C-style indentation
--- vim.opt.cindent = true
+vim.opt.cindent = true
 
 -- Enables automatic indentation
--- vim.opt.autoindent = true
+vim.opt.autoindent = true
 
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.opt.mouse = 'a'
