@@ -2,11 +2,10 @@ return { -- Highlight, edit, and navigate code
   'nvim-treesitter/nvim-treesitter',
   dependencies = {
     'nvim-treesitter/nvim-treesitter-textobjects',
-    'nvim-treesitter/nvim-treesitter-context',
   },
   build = ':TSUpdate',
   opts = {
-    ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'vim', 'vimdoc' },
+    ensure_installed = { 'bash', 'c', 'diff', 'javascript', 'typescript', 'lua', 'markdown', 'html', 'json', 'cpp' },
     -- Autoinstall languages that are not installed
     auto_install = true,
     highlight = {
@@ -22,7 +21,8 @@ return { -- Highlight, edit, and navigate code
     -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
 
     -- Prefer git instead of curl in order to improve connectivity in some environments
-    require('nvim-treesitter.install').prefer_git = true
+    require('nvim-treesitter.install').prefer_git = false
+    require('nvim-treesitter.install').compilers = { 'zig', 'gcc', 'clang' }
     ---@diagnostic disable-next-line: missing-fields
     require('nvim-treesitter.configs').setup {
       incremental_selection = {

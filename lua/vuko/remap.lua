@@ -80,6 +80,7 @@ vim.keymap.set('n', 'tw', ':tabclose<Return>')
 -- Split window
 vim.keymap.set('n', 'ss', ':split<Return>')
 vim.keymap.set('n', 'sv', ':vsplit<Return>')
+vim.keymap.set('n', 'sx', ':close<Return>')
 
 -- Move window
 vim.keymap.set('n', 'sh', '<C-w>h')
@@ -88,10 +89,10 @@ vim.keymap.set('n', 'sj', '<C-w>j')
 vim.keymap.set('n', 'sl', '<C-w>l')
 
 -- Resize window
-vim.keymap.set('n', '<C-S-h>', '<C-w><')
-vim.keymap.set('n', '<C-S-l>', '<C-w>>')
-vim.keymap.set('n', '<C-S-k>', '<C-w>+')
-vim.keymap.set('n', '<C-S-j>', '<C-w>-')
+-- vim.keymap.set('n', '<C-S-h>', '<C-w><')
+-- vim.keymap.set('n', '<C-S-l>', '<C-w>>')
+-- vim.keymap.set('n', '<C-S-k>', '<C-w>+')
+-- vim.keymap.set('n', '<C-S-j>', '<C-w>-')
 
 -- Move lines up and down in normal mode using CTRL-Shift-J and CTRL-Shift-K
 -- vim.keymap.set('n', '<C-j>', ':m .+1<CR>==', {noremap = true, silent = true})
