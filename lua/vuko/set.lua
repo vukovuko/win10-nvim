@@ -37,7 +37,7 @@ vim.opt.relativenumber = true
 -- vim.opt.cindent = true
 
 -- Enables automatic indentation
--- vim.opt.autoindent = true            
+-- vim.opt.autoindent = true
 
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.opt.mouse = 'a'
@@ -107,3 +107,4 @@ vim.opt.wildignore:append { '*/node_modules/*' }
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 vim.opt.hlsearch = true
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
+

@@ -53,7 +53,7 @@ vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
 vim.keymap.set('n', 'J', 'mzJ`z')
 
 vim.keymap.set('n', 'Q', '<nop>')
-vim.keymap.set('n', '<C-t>', '<cmd>silent !tmux neww tmux-sessionizer<CR>')
+vim.keymap.set('n', '<C-r>', '<cmd>silent !tmux neww tmux-sessionizer<CR>')
 vim.keymap.set('n', '<leader>f', vim.lsp.buf.format)
 
 -- Navigate to the next item in the quick list
@@ -72,26 +72,26 @@ vim.keymap.set('n', '<leader>j', '<cmd>lprev<CR>zz')
 vim.keymap.set('n', '<leader>s', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 -- Tabs
--- keymap.set("n", "te", ":tabedit")
--- keymap.set("n", "<tab>", ":tabnext<Return>", opts)
--- keymap.set("n", "<s-tab>", ":tabprev<Return>", opts)
--- keymap.set("n", "tw", ":tabclose<Return>", opts)
+vim.keymap.set('n', 'te', ':tabedit')
+vim.keymap.set('n', '<tab>', ':tabnext<Return>')
+vim.keymap.set('n', '<s-tab>', ':tabprev<Return>')
+vim.keymap.set('n', 'tw', ':tabclose<Return>')
 
 -- Split window
--- keymap.set("n", "ss", ":split<Return>", opts)
--- keymap.set("n", "sv", ":vsplit<Return>", opts)
+vim.keymap.set('n', 'ss', ':split<Return>')
+vim.keymap.set('n', 'sv', ':vsplit<Return>')
 
 -- Move window
--- keymap.set("n", "sh", "<C-w>h")
--- keymap.set("n", "sk", "<C-w>k")
--- keymap.set("n", "sj", "<C-w>j")
--- keymap.set("n", "sl", "<C-w>l")
+vim.keymap.set('n', 'sh', '<C-w>h')
+vim.keymap.set('n', 'sk', '<C-w>k')
+vim.keymap.set('n', 'sj', '<C-w>j')
+vim.keymap.set('n', 'sl', '<C-w>l')
 
 -- Resize window
--- keymap.set("n", "<C-S-h>", "<C-w><")
--- keymap.set("n", "<C-S-l>", "<C-w>>")
--- keymap.set("n", "<C-S-k>", "<C-w>+")
--- keymap.set("n", "<C-S-j>", "<C-w>-")
+vim.keymap.set('n', '<C-S-h>', '<C-w><')
+vim.keymap.set('n', '<C-S-l>', '<C-w>>')
+vim.keymap.set('n', '<C-S-k>', '<C-w>+')
+vim.keymap.set('n', '<C-S-j>', '<C-w>-')
 
 -- Move lines up and down in normal mode using CTRL-Shift-J and CTRL-Shift-K
 -- vim.keymap.set('n', '<C-j>', ':m .+1<CR>==', {noremap = true, silent = true})
@@ -104,7 +104,3 @@ vim.keymap.set('n', '<leader>s', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 -- Move lines up and down in visual mode using CTRL-Shift-J and CTRL-Shift-K
 -- vim.keymap.set('v', '<C-j>', ":m '>+1<CR>gv=gv", {noremap = true, silent = true})
 -- vim.keymap.set('v', '<C-k>', ":m '<-2<CR>gv=gv", {noremap = true, silent = true})
-
-vim.keymap.set('n', '<leader><leader>', function()
-  vim.cmd 'so'
-end)
