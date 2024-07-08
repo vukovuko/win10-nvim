@@ -72,6 +72,7 @@ vim.keymap.set('n', '<leader>j', '<cmd>lprev<CR>zz')
 vim.keymap.set('n', '<leader>s', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 -- Tabs
+vim.keymap.set('n', '<leader>to', '<cmd>tabnew<Return>', { desc = 'Open new tab' })
 vim.keymap.set('n', 'te', ':tabedit')
 vim.keymap.set('n', '<tab>', ':tabnext<Return>')
 vim.keymap.set('n', '<s-tab>', ':tabprev<Return>')
