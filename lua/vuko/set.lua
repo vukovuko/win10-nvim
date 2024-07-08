@@ -45,6 +45,9 @@ vim.opt.mouse = 'a'
 -- Don't show the mode, since it's already in the status line
 vim.opt.showmode = false
 
+-- Terminal colors
+vim.opt.termguicolors = true
+
 -- Sync clipboard between OS and Neovim.
 --  Remove this option if you want your OS clipboard to remain independent.
 --  See `:help 'clipboard'`
@@ -78,6 +81,11 @@ vim.opt.updatetime = 150
 -- Decrease mapped sequence wait time
 -- Displays which-key popup sooner
 vim.opt.timeoutlen = 500
+
+-- Make netrw look nicer
+vim.g.netrw_browse_split = 0
+vim.g.netrw_banner = 0
+vim.g_netrw_winsize = 25
 
 -- Configure how new splits should be opened
 vim.opt.splitright = true
