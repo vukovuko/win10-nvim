@@ -5,7 +5,7 @@ return { -- Highlight, edit, and navigate code
   },
   build = ':TSUpdate',
   opts = {
-    ensure_installed = { 'bash', 'c', 'diff', 'javascript', 'typescript', 'lua', 'markdown', 'html', 'json', 'cpp', 'query', 'json', 'go', 'tsx' },
+    ensure_installed = { 'bash', 'c', 'diff', 'javascript', 'typescript', 'lua', 'markdown', 'html', 'json', 'cpp', 'query', 'json', 'go', 'tsx', 'dockerfile' },
     -- Autoinstall languages that are not installed
     auto_install = true,
     highlight = {
@@ -16,6 +16,15 @@ return { -- Highlight, edit, and navigate code
       additional_vim_regex_highlighting = { 'ruby' },
     },
     indent = { enable = true, disable = { 'ruby' } },
+    incremental_selection = {
+      enable = true,
+      keymaps = {
+        init_selection = 'gnn',
+        node_incremental = 'grn',
+        scope_incremental = 'grc',
+        node_decremental = 'grm',
+      },
+    },
   },
   config = function(_, opts)
     -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
