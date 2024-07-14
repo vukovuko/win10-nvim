@@ -45,6 +45,7 @@ return { -- Autoformat
       css = { { 'prettierd', 'prettier' } },
       scss = { { 'prettierd', 'prettier' } },
       sh = { { 'shellcheck' } },
+      markdown = { { 'prettierd', 'prettier' } },
     },
   },
 }
