@@ -34,6 +34,7 @@ return { -- Autocompletion
     'hrsh7th/cmp-nvim-lsp',
     'hrsh7th/cmp-path',
     'hrsh7th/cmp-cmdline',
+    'onsails/lspkind.nvim',
   },
   config = function()
     -- See `:help cmp`
@@ -107,6 +108,22 @@ return { -- Autocompletion
         { name = 'codeium' },
         { name = 'path' },
         { name = 'buffer', keyword_length = 5 },
+      },
+      formatting = {
+        format = require('lspkind').cmp_format {
+          mode = 'symbol_text',
+          maxwidth = 50,
+          ellipsis_char = '...',
+          symbol_map = { Codeium = '' },
+          menu = {
+            nvim_lua = '[api]',
+            nvim_lsp = '[LSP]',
+            luasnip = '[snip]',
+            vim_dadbod_completion = '[DB]',
+            path = '[path]',
+            buffer = '[Buffer]',
+          },
+        },
       },
     }
 

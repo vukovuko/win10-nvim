@@ -57,7 +57,7 @@ vim.opt.termguicolors = true
 vim.opt.breakindent = true
 
 -- Save undo history
-vim.opt.undofile = false
+vim.opt.undofile = true
 
 -- Disable swap files
 vim.opt.swapfile = false

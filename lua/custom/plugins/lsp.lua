@@ -13,6 +13,9 @@ return { -- LSP Configuration & Plugins
     -- `neodev` configures Lua LSP for your Neovim config, runtime and plugins
     -- used for completion, annotations and signatures of Neovim apis
     { 'folke/neodev.nvim', opts = {} },
+
+    'b0o/SchemaStore.nvim',
+    'antosha417/nvim-lsp-file-operations',
   },
   config = function()
     -- Brief aside: **What is LSP?**
@@ -159,6 +162,9 @@ return { -- LSP Configuration & Plugins
       gopls = {},
       pyright = {},
       rust_analyzer = {},
+      bashls = {
+        filetypes = { 'sh', 'zsh' },
+      },
       -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
       --
       -- Some languages (like typescript) have entire language plugins that can be useful:
@@ -166,7 +172,29 @@ return { -- LSP Configuration & Plugins
       --
       -- But for many setups, the LSP (`tsserver`) will work just fine
       tsserver = {},
-      --
+
+      shopify_theme_ls = {},
+
+      jsonls = {
+        settings = {
+          json = {
+            schemas = require('schemastore').json.schemas(),
+            validate = { enable = true },
+          },
+        },
+      },
+
+      yamlls = {
+        settings = {
+          yaml = {
+            schemaStore = {
+              enable = false,
+              url = '',
+            },
+            schemas = require('schemastore').yaml.schemas(),
+          },
+        },
+      },
 
       lua_ls = {
         -- cmd = {...},
@@ -180,6 +208,25 @@ return { -- LSP Configuration & Plugins
             -- You can toggle below to ignore Lua_LS's noisy `missing-fields` warnings
             -- diagnostics = { disable = { 'missing-fields' } },
           },
+        },
+      },
+
+      graphql = {
+        capabilities = capabilities,
+        filetypes = { 'graphql', 'gql', 'svelte', 'typescriptreact', 'javascriptreact' },
+      },
+
+      emmet_ls = {
+        capabilities = capabilities,
+        filetypes = {
+          'html',
+          'typescriptreact',
+          'javascriptreact',
+          'css',
+          'sass',
+          'scss',
+          'less',
+          'svelte',
         },
       },
     }
@@ -200,6 +247,9 @@ return { -- LSP Configuration & Plugins
       'prettier',
       'prettierd',
       'eslint_d',
+      'clangd',
+      'pyright',
+      'jsonlint',
     })
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
