@@ -36,12 +36,12 @@ return {
       desc = '[R]ename',
       mode = 'n',
     },
-    {
-      '<leader>s',
-      "<cmd>echo '[S]earch'<CR>",
-      desc = '[S]earch',
-      mode = 'n',
-    },
+    -- {
+    --   '<leader>s',
+    --   "<cmd>echo '[S]earch'<CR>",
+    --   desc = '[S]earch',
+    --   mode = 'n',
+    -- },
     {
       '<leader>w',
       "<cmd>echo '[W]orkspace'<CR>",

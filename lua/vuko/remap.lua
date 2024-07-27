@@ -57,10 +57,10 @@ vim.keymap.set('n', '<C-p>', '<cmd>silent !tmux neww tmux-sessionizer<CR>')
 -- vim.keymap.set('n', '<leader>f', vim.lsp.buf.format)
 
 -- Navigate to the next item in the quick list
--- vim.keymap.set('n', '<C-k>', '<cmd>cprev<CR>zz')
+vim.keymap.set('n', '<leader>;', '<cmd>cnext<CR>zz')
 
 -- Navigate to the previous item in the quick list
-vim.keymap.set('n', '<C-j>', '<cmd>cprev<CR>zz')
+vim.keymap.set('n', '<leader>h', '<cmd>cprev<CR>zz')
 
 -- Navigate to the next item in the location list
 vim.keymap.set('n', '<leader>k', '<cmd>lnext<CR>zz')
@@ -106,3 +106,7 @@ vim.keymap.set('n', 'sl', '<C-w>l')
 -- Move lines up and down in visual mode using CTRL-Shift-J and CTRL-Shift-K
 -- vim.keymap.set('v', '<C-j>', ":m '>+1<CR>gv=gv", {noremap = true, silent = true})
 -- vim.keymap.set('v', '<C-k>', ":m '<-2<CR>gv=gv", {noremap = true, silent = true})
+
+-- Copy file paths
+vim.keymap.set('n', '<leader>cf', '<cmd>let @+ = expand("%")<CR>', { desc = 'Copy File Name' })
+vim.keymap.set('n', '<leader>cp', '<cmd>let @+ = expand("%:p")<CR>', { desc = 'Copy File Path' })
